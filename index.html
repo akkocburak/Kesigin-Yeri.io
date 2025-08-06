@@ -115,6 +115,33 @@
         .footer-widget.logo-widget .logo {
             font-family: 'Berkshire Swash', cursive;
         }
+        @media (max-width: 768px) {
+            .main-header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                z-index: 1000;
+                background: #fff;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            }
+            body {
+                padding-top: 100px !important;
+            }
+            .header-upper {
+                min-height: 100px;
+                padding: 0 10px;
+            }
+            .main-header .logo-box {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+            }
+            .main-header .mobile-nav-toggler {
+                float: right;
+                margin-top: 30px;
+            }
+        }
     </style>
 </head>
 
@@ -1023,7 +1050,7 @@ background-size: cover; background-image: url(https://tandirciemineabla.com/uplo
         <!-- End Header Search -->
 
         <!--Scroll to top-->
-        <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-up"></span></div>
+       
 
 
 
