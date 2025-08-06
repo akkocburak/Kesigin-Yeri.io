@@ -115,6 +115,8 @@
         .footer-widget.logo-widget .logo {
             font-family: 'Berkshire Swash', cursive;
         }
+        /* Önceki sticky/fixed ve mobil header CSS'lerini kaldırıyorum */
+        /* Yeni, sade mobil navbar için CSS */
         @media (max-width: 768px) {
             .main-header {
                 position: fixed;
@@ -124,22 +126,42 @@
                 z-index: 1000;
                 background: #fff;
                 box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 16px;
             }
-            body {
-                padding-top: 100px !important;
-            }
-            .header-upper {
-                min-height: 100px;
-                padding: 0 10px;
+            .header-upper, .main-header .nav-outer, .main-header .navbar-collapse, .main-header .main-menu, .main-header .navigation {
+                display: none !important;
             }
             .main-header .logo-box {
                 display: flex;
                 align-items: center;
-                justify-content: flex-start;
+                height: 60px;
+            }
+            .main-header .logo img {
+                height: 48px;
+                width: auto;
             }
             .main-header .mobile-nav-toggler {
-                float: right;
-                margin-top: 30px;
+                display: block !important;
+                font-size: 2rem;
+                margin-left: auto;
+                cursor: pointer;
+            }
+            .mobile-menu {
+                display: none;
+                position: fixed;
+                top: 60px;
+                left: 0;
+                width: 100vw;
+                background: #fff;
+                z-index: 2000;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            }
+            .mobile-menu.active {
+                display: block;
             }
         }
     </style>
